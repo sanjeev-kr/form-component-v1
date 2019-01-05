@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sanjeev_FormComponentV1 extension
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category  Sanjeev
+ * @package   Sanjeev_FormComponentV1
+ * @copyright Copyright (c) 2019
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sanjeev_FormComponentV1::formcomponentv1" title="Form Component V1" module="Sanjeev_FormComponentV1" sortOrder="0" resource="Sanjeev_FormComponentV1::formcomponentv1" parent="Magento_Catalog::catalog"/>
+        <add id="Sanjeev_FormComponentV1::formcomponentv1_formcomponentv1" title="Form Component V1s" module="Sanjeev_FormComponentV1" sortOrder="10" action="sanjeev_formcomponentv1/formcomponentv1" resource="Sanjeev_FormComponentV1::formcomponentv1_formcomponentv1" parent="Sanjeev_FormComponentV1::formcomponentv1"/>
+    </menu>
+</config>

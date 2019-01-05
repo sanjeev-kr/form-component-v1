@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sanjeev_FormComponentV1 extension
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category  Sanjeev
+ * @package   Sanjeev_FormComponentV1
+ * @copyright Copyright (c) 2019
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">sanjeev_formcomponentv1_formcomponentv1_form.formcomponentv1_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Form Component V1 Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="back" class="Sanjeev\FormComponentV1\Block\Adminhtml\Formcomponentv1\Edit\Buttons\Back"/>
+            <button name="delete" class="Sanjeev\FormComponentV1\Block\Adminhtml\Formcomponentv1\Edit\Buttons\Delete"/>
+            <button name="reset" class="Sanjeev\FormComponentV1\Block\Adminhtml\Formcomponentv1\Edit\Buttons\Reset"/>
+            <button name="save" class="Sanjeev\FormComponentV1\Block\Adminhtml\Formcomponentv1\Edit\Buttons\Save"/>
+            <button name="save_and_continue" class="Sanjeev\FormComponentV1\Block\Adminhtml\Formcomponentv1\Edit\Buttons\SaveAndContinue"/>
+        </buttons>
+        <namespace>sanjeev_formcomponentv1_formcomponentv1_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>sanjeev_formcomponentv1_formcomponentv1_form.formcomponentv1_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="formcomponentv1_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="sanjeev_formcomponentv1/formcomponentv1/save"/>
+        </settings>
+        <dataProvider class="Sanjeev\FormComponentV1\Ui\DataProvider\Form\DataProvider" name="formcomponentv1_form_data_source">
+            <settings>
+                <requestFieldName>formcomponentv1_id</requestFieldName>
+                <primaryFieldName>formcomponentv1_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <!--fieldset name="general">
+        <settings>
+            <label translate="true">Form Component V1 Information</label>
+        </settings>
+        <field name="formcomponentv1_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">formcomponentv1</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>formcomponentv1_id</dataScope>
+            </settings>
+        </field>
+        <field name="title" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">formcomponentv1</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Title</label>
+                <dataScope>title</dataScope>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset-->
+</form>

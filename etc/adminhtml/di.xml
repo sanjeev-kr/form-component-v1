@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sanjeev_FormComponentV1 extension
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category  Sanjeev
+ * @package   Sanjeev_FormComponentV1
+ * @copyright Copyright (c) 2019
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Sanjeev\FormComponentV1\Controller\Adminhtml\Formcomponentv1\MassDelete">
+        <arguments>
+            <argument name="successMessage" xsi:type="string">A total of %1 Form Component V1s have been deleted.</argument>
+            <argument name="errorMessage" xsi:type="string" translate="true">An error occurred while deleting Form Component V1s.</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Sanjeev\FormComponentV1\Ui\DataProvider\Form\Modifier\Pool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="text_field" xsi:type="array">
+                    <item name="class" xsi:type="string">Sanjeev\FormComponentV1\Ui\DataProvider\Form\Modifier\Text</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <type name="Sanjeev\FormComponentV1\Ui\DataProvider\Form\DataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">Sanjeev\FormComponentV1\Ui\DataProvider\Form\Modifier\Pool</argument>
+        </arguments>
+    </type>
+
+</config>
