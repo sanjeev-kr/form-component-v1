@@ -16,16 +16,11 @@
 
 namespace Sanjeev\FormComponentV1\Ui\DataProvider\Form\Modifier;
 
+use Magento\Ui\Component\Form;
 
 class Text extends AbstractModifier
 {
 	
-    public function modifyData(array $data)
-    {
-        return $data;
-    }
-
-    
     public function modifyMeta(array $meta)
     {	
     	$meta['first_fieldset_name'] = [
@@ -56,9 +51,9 @@ class Text extends AbstractModifier
                     		'arguments' => [
                         	'data' => [
                             	'config' => [
-                                	 'formElement' => 'input',
-                                     'componentType' => 'field',
-                                     'dataType' => 'text',
+                                	 'formElement' => Form\Element\Input::NAME,
+                                     'componentType' => Form\Field::NAME,
+                                     'dataType' => Form\Element\DataType\Text::NAME,
                                      'dataScope' => 'title',
                                 	 'source' => 'formcomponentv1',
                                 	 'visible' => 1,

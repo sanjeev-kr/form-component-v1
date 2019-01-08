@@ -30,6 +30,10 @@
                     <item name="class" xsi:type="string">Sanjeev\FormComponentV1\Ui\DataProvider\Form\Modifier\Text</item>
                     <item name="sortOrder" xsi:type="number">10</item>
                 </item>
+                <item name="toggle_field" xsi:type="array">
+                    <item name="class" xsi:type="string">Sanjeev\FormComponentV1\Ui\DataProvider\Form\Modifier\Toggle</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                </item>
             </argument>
         </arguments>
     </virtualType>

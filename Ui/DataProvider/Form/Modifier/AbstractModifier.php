@@ -26,5 +26,13 @@ use Magento\Ui\DataProvider\Modifier\ModifierInterface;
  */
 abstract class AbstractModifier implements ModifierInterface
 {
-    
+	public function modifyData(array $data)
+    {
+        return $data;
+    }
+
+    public function modifyMeta(array $meta)
+    {
+    	return $meta;
+    }    
 }

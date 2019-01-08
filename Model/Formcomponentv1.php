@@ -110,4 +110,25 @@ class Formcomponentv1 extends \Magento\Framework\Model\AbstractModel implements 
     {
         return $this->getData(\Sanjeev\FormComponentV1\Api\Data\Formcomponentv1Interface::TITLE);
     }
+
+    /**
+     * set Status
+     *
+     * @param mixed $status
+     * @return \Sanjeev\FormComponentV1\Api\Data\Formcomponentv1Interface
+     */
+    public function setStatus($status)
+    {
+        return $this->setData(\Sanjeev\FormComponentV1\Api\Data\Formcomponentv1Interface::STATUS, $status);
+    }
+
+    /**
+     * get Status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->getData(\Sanjeev\FormComponentV1\Api\Data\Formcomponentv1Interface::STATUS);
+    }
 }

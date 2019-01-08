@@ -35,12 +35,19 @@ interface Formcomponentv1Interface
     const TITLE = 'title';
 
     /**
+     * Title attribute constant
+     * 
+     * @var string
+     */
+    const STATUS = 'status';
+
+    /**
      * Get ID
      *
      * @return int|null
      */
     public function getId();
-
+    
     /**
      * Get ID
      *
@@ -70,4 +77,19 @@ interface Formcomponentv1Interface
      * @return Formcomponentv1Interface
      */
     public function setTitle($title);
+
+    /**
+     * Get Status
+     *
+     * @return int|null
+     */
+    public function getStatus();
+
+    /**
+     * Set Status
+     *
+     * @param mixed $status
+     * @return Formcomponentv1Interface
+     */
+    public function setStatus($status);
 }
